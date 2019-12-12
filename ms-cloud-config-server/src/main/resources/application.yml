@@ -1,0 +1,12 @@
+server:
+    port: 8888
+spring:
+    application:
+        name: spring-config-server
+    cloud:
+        config:
+            server:
+                git:
+                    password: la clave # clave del repositorio
+                    uri: https://usuario-x@bitbucket.org/repositorio-x/config-server.git #uri repositorio
+                    username: usuario@user.com #usuario del repositorio
