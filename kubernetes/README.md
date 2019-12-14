@@ -49,7 +49,7 @@ EOF
 #Ejecutar el siguiente comando
 sysctl --system
 
-#-----Hasta aqui se tiene que replicar tambien en los workers
+# -----Hasta aqui se tiene que replicar tambien en los workers
 
 ## 11 Crear kube-config.yml
 vim kube-config.yml
@@ -73,11 +73,11 @@ cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 
 chown $(id -u):$(id -g) $HOME/.kube/config
 
-#-------FLANNEL-----
+# -------FLANNEL-----
 ## 15 Instalar Flannel
 k3ubectl apply -f https://raw.githubusercontent.com/coreos/flannel/v0.9.1/Documentation/kube-flannel.yml
 
-##16 Instalar parche de Flannel
+## 16 Instalar parche de Flannel
 vi /etc/kubernetes/manifests/kube-controller-manager.yaml
 
 ### Agregar lo siguiente al kube-controller.yaml en /etc/kubernetes/manifests/kube-controller-manger.yaml solo en el caso de el archivo no lo tenga
